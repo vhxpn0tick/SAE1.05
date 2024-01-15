@@ -8,8 +8,7 @@ def tradpseudocsv(fichier):
     evenements = []
     evenement = {}
     with open(fichier, 'r') as file:
-        lines = file.readlines()
-        
+        lines = file.readlines()    
     for line in lines:
         if line.startswith('BEGIN:VEVENT'):
             evenement = {}
