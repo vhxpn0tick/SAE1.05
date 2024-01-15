@@ -4,6 +4,8 @@ from datetime import datetime
 def tradpseudocsv(fichier):
     evenement = {}
     with open(fichier, 'r') as file:
+        premiere = file.readline()
+        print(premiere)
         for line in file:
             if line.startswith('BEGIN:VEVENT'):
                 continue
