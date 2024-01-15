@@ -1,6 +1,8 @@
 import re
 import matplotlib.pyplot as plt
 from datetime import datetime
+import markdown
+import html
 
 def tradpseudocsv(fichier):
     evenements = []
@@ -75,4 +77,8 @@ plt.pie(sizes, labels=labels, colors=colors,
 autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('Camembert1.png')
-plt.show()
+with open("testtt.md",'r') as f:
+    text=f.read()
+    html=markdown.markdown(pseudocsv,extensions=['tables'])
+with open('Picnic.html','w') as f:
+    f.write(html)

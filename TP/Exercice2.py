@@ -52,3 +52,4 @@ def tradpseudocsv(fichier):
 fichier = input("Donnez le nom du fichier :\n")
 pseudocsv = tradpseudocsv(fichier)
 print(pseudocsv)
+
