@@ -73,7 +73,7 @@ labels = 'Septembre', 'Octobre' ,'Novembre', 'Décembre'
 sizes = [sept, oct, nov, dec]
 colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
 plt.pie(sizes, labels=labels, colors=colors,
-autopct='%1.1f%%', shadow=True, startangle=90)
+autopct='%1.8f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('Camembert1.png')
 with open("testtt.md",'r') as f:
