@@ -153,7 +153,7 @@ ___Nombre de trames :___ {compteur}
 
 
 
-<img src="Activité-suspect.png" class="merge" />
+<img src="../Support/Activité-suspect.png" class="merge" />
 ##___Protocol + Stats :___ 
 - SSH: {ssh}
 - HTTP: {http_final}
