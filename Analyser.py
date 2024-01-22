@@ -125,7 +125,7 @@ for ip, count in addresse.items():
     pseudo_csv_content += f"{ip};{count}\n"
 
 
-with open("adresses.csv", "w") as csv_file:
+with open("Rapport/adresses.csv", "w") as csv_file:
     csv_file.write(pseudo_csv_content)
 
 
@@ -136,7 +136,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral','red','blue','yell
 plt.figure(figsize=(10, 7))
 plt.pie(valeurs, labels=cles, colors=colors,autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('Activité-suspect.png', transparent=True)
+plt.savefig('Support/Activité-suspect.png', transparent=True)
 
 markdown_text = f'''
 #___Résultats Brut analyse du trafic___
@@ -174,7 +174,7 @@ ___Nombre de trames :___ {compteur}
 
 html_output = markdown.markdown(markdown_text)
 
-with open("rapport.html", "w") as file:
+with open("Rapport/rapport.html", "w") as file:
     file.write(html_output)
 
 print("Done.")
