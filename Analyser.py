@@ -50,9 +50,10 @@ def Analyser(log_contents):
 
 
 
+            
+
             for ip2 in Ip_pattern4.findall(line):
                 clean_ip2 = port_pattern.sub('', ip2)
-
                 if clean_ip2 not in allip :
 
 
@@ -62,7 +63,7 @@ def Analyser(log_contents):
                 if clean_ip2 in allip:
                     allip[clean_ip2]=allip[clean_ip2]+1
             
-            for ip2  in IP_pattern5.findall(line):
+            for ip2  in IP_pattern5.findall(line): 
                 clean_ip2 = port_pattern.sub('', ip2)
                 if clean_ip2 not in allip:
                     allip[clean_ip2]=1
@@ -105,7 +106,6 @@ def Analyser(log_contents):
 
 
         drap = 0
-
     moyenne = sum(occurence.values()) /len(occurence) 
 
     suspect = {cle: valeur for cle, valeur in occurence.items() if valeur > moyenne}
